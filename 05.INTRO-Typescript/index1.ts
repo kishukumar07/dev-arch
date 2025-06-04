@@ -52,27 +52,15 @@ password : "232332"
 
 
 
+// a type can be optional but it doesnt mean u can put any value/any type of value  in the data 
+// eg ...phone :"dfa" (illegal)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for one user we are using object ...but what if we have to store many Users 
+// => array of objects .....
+let users :User[] = [];   //type ->  User(name of type alias) array[]  ...hahah....   this is how we define array of objects hahah... 
 
 
 
