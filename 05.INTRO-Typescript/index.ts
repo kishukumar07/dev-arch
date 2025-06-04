@@ -126,13 +126,36 @@ let f: {
 
 
 
-// rather than copy the whole code we store and use in variable again and again ...
+// rather than copy the whole code we store and use in variable again and again ... in order to  defining the another object we dont need to repeate the type wala code again and again which is not allowed in js ... 
 
-type  = {  
-    //we are trying to store typscript type inside a js variable ....is this applicable ...  
+
+/*
+type = {  
     name: string;
     age: number;
     isMarried: boolean;
+}
+*/
+
+
+//we are trying to store typscript type inside a js variable ....is this applicable ...  NO
+
+
+
+//TYPE ALIAS ... WE CAN STORE ANY JS TYPES IN THE  TYPE ALIAS .
+                  //it's like a variable only but it only store types in ts not values ...
+type obj = {  
+    name: string;
+    age: number;
+    isMarried: boolean;
+}
+
+//now rather than defining the same structure again and again ...we can directly do this ...
+
+let g : obj = {
+    name : "niket",
+    age:22,
+    isMarried:false,
 }
 
 
