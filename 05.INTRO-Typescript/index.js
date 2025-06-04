@@ -1,1 +1,27 @@
-"use strict" ; 
+"use strict";
+//Declaring a Variable 
+let a = 10;
+let b = "Masai";
+let c = false;
+// c = 10 ; //you can not reassing the c with value where value != declared datatype. 
+//Arrays ...
+let d = [1, 2, 3, 4]; //array declaration and initilization ...
+//Strings ...
+let e = ["1", "2"];
+//Tuples(Not part of JS)
+//RGB(100,200,10) 
+let RGB = [100, 200, 10]; //tuples -> limiting the number of elements that array can have; 
+//if we want n=80  in that case array should be best choice;   
+//tuples is only for possible count of element . eg 3/4/5 elements Only.... 
+let code = [100, 200, "10"]; //diff type of element is allowed in   
+// any thing that can be done in js can not be done in js that is also the limitations of the ts ... ...
+// seneario if you have to build a app for windows(microsoft) you have to use c#(built by microsoft) and  TS which is also built by microsoft thats why 
+// a lot of syntex of ts is comming from c sharp . 
+//enum 
+var Roles;
+(function (Roles) {
+    Roles[Roles["super_admin"] = 0] = "super_admin";
+    Roles[Roles["admin"] = 1] = "admin";
+    Roles[Roles["user"] = 2] = "user";
+})(Roles || (Roles = {}));
+console.log(Roles.admin);

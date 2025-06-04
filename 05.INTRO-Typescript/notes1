@@ -35,9 +35,7 @@ console.log(sum(5,true)) //type error
 
 
 
-
-
-
+npx tsc is used for converting tscode(index.js) to jscode(index.js) which is executable in node Environment 
 
 
 
