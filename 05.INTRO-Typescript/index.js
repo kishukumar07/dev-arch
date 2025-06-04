@@ -67,3 +67,6 @@ console.log("Good morning prateek");
 const greet = "Good Morning";
 // whenever we want to use a value for multiple time we store that value in a variable and use that variable multiple Time.
 console.log(greet, "Nrupul");
+
+
+

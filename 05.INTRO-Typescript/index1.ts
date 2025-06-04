@@ -31,11 +31,13 @@ password : "232332"
 
 
 
+
+//OPTIONAL TYPES...... 
 type actor ={
     name : string ; 
     age : number ; 
     email: string ;
-    phone?: number;          //see ? telling that requied is false  
+    phone?: number;        //see ? telling that requied is false  (OPTIONAL TYPES) 
     password : string ; 
 } ; 
 
@@ -56,7 +58,11 @@ password : "232332"
 
 
 
- 
+
+
+
+
+
 
 
 
