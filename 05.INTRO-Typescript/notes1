@@ -1,0 +1,50 @@
+WE ARE GOING TO USE THE  NOTES BY DIGITAL OCEAN ....
+
+https://www.digitalocean.com/community/tutorials/typescript-new-project
+
+this is a typescript project we are going to create ... 
+
+js doesnt have any type error...
+ts has type error  ... 
+
+TypeScript enforces type safety, so passing incorrect types (e.g., true instead of a number) causes a compile-time error.
+JavaScript allows any type, leading to unexpected behavior at runtime like true + "OK" resulting in "trueOK".
+
+
+Usecase :- 
+<!-- javascript hasnot type error .... -->
+function sum(a, b) {
+  return a + b;
+}
+// Example usage
+console.log(sum(5, 10)); // Output: 15
+console.log(sum("4", true)); // Output: 4true  //no type error
+
+
+<!-- typescript : has type error ...  -->
+function sum(a: number, b: number): number {
+  return a + b;
+}
+// Example usage
+console.log(sum(5, 10)); // Output: 15
+console.log(sum(5,true)) //type error 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
