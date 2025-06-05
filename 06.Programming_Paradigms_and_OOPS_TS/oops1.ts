@@ -195,6 +195,8 @@ console.log(t.a);  //it will be 1  ::>> a's default value
 // and for that we have a new keyword  "static".. 
 
 
+//STATIC PROPERTY OF CLASS.... 
+
 
 class Instructor {
     name: string;
@@ -230,9 +232,6 @@ const niket =new Instructor("niket",22);
 console.log(disha.ID,niket.ID); 
 disha.setID=34; 
 console.log(disha.ID, niket.ID); 
-
-
-
 
 
 
