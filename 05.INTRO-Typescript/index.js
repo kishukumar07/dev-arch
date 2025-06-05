@@ -67,6 +67,15 @@ console.log("Good morning prateek");
 const greet = "Good Morning";
 // whenever we want to use a value for multiple time we store that value in a variable and use that variable multiple Time.
 console.log(greet, "Nrupul");
-
-
-
+//defining OBJECT  is just similar like .... defining a array in ts. 
+let f = {
+    name: "Niket",
+    age: 22, //obj 
+    isMarried: false,
+};
+//now rather than defining the same structure again and again ...we can directly do this ...
+let g = {
+    name: "niket",
+    age: 22,
+    isMarried: false,
+};
