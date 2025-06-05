@@ -1,3 +1,4 @@
+//INHERITANCE ....
 //creating a Vehicle Parent class... 
 abstract class Vehicle {
     engine: string;
@@ -69,9 +70,15 @@ let shreeRamRath = new Bus("engine4.3" , 16, 56, 100);
 console.log(shreeRamRath.ticket);  
 
 
+
+
+
+
+
+//ABSTRACTION ....
+
 //can i create a instance of Vehical class itself . 
-  
- 
+
 // const v = new Vehicle("xyzengine",45)  //commented 
 
 //but dont you think buying only engine and wheel is worthit 
@@ -85,14 +92,7 @@ console.log(shreeRamRath.ticket);
 
 //real life eg : you don't need to know how the engine works to operate the vehicle, you just focus on the steering, brakes, and accelerator.
 
-
-
-
-
-
-
-
-
+// const v = new Vehicle("xyzengine",45)  //now we cant do this due to abstraction class ... 
 
 
 
