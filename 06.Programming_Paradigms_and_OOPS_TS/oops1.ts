@@ -91,7 +91,7 @@ s.age =23;
 // s.id=3434343;  //should it be allowed ... we make the this privet key 
 
 
-
+/*
 
 
 let id_counter2=1; 
@@ -100,7 +100,7 @@ class Instructor {
     name :string ;  
     age :number ;
  private id :number ;    //this id is only acessable iside this class only ...  
-     constructor(name:string ,age:number,id:number){
+     constructor(name:string ,age:number){
         this.name =name;  
         this.age =age; 
         this.id =id_counter ; 
@@ -120,7 +120,7 @@ set setID(id:number){    //setter
 }
 
 
-const ram= new Instructor("ram",43,343); 
+const ram= new Instructor("ram",43); 
 // ram.id =10 ; //banned cause of privet keyword
 // let id = ram.id //banned cause of privet keyword ..
 
@@ -129,6 +129,78 @@ console.log(ram.ID);  //geting the privet field of obj
 //getter cant be used for set the value for this we have setters.
  ram.setID =23; 
  console.log(ram); 
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+//there was one problem  of counter variable  ..lets get rid of that ... 
+ //creating counter outside of the class and traking the user of class inside  ...dont you think is too odd ...  
+ //so how to solve that 
+
+
+let id_counter2=1; 
+
+class Instructor {
+    name :string ;  
+    age :number ;
+ private id :number ;    //this id is only acessable iside this class only ...  
+ a:number; 
+     constructor(name:string ,age:number){
+        this.name =name;  
+        this.age =age; 
+        this.id =id_counter ; 
+        id_counter2++;   //auto increment 
+        this.a=1; 
+     }
+
+ get ID(){   //getter 
+    return this.id;    //id is acessable within the class 
+ }
+
+set setID(id:number){    //setter 
+    this.id = id ;       //id is acessable within the class
+}
+
+}
+
+
+const ram= new Instructor("ram",43); 
+ram.a = 10; 
+console.log(ram.a); //10
+
+
+const  t= new Instructor("b",30); 
+console.log(t.a);  //it will be 1  ::>> a's default value
+
+// dont you think ram.a and t.a both are totally diffrent  things... 
+
+//i want a single value even if i change my instance of class ..the variable should not reset ... 
+
+//this is the thing that the id_counter variable is solving ...the value of id_counter will be same even if new instance creation of object is created.
+
+//we have to  make the same behaviour but witout using global variable  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

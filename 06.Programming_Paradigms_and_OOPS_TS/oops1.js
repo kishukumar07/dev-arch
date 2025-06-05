@@ -78,3 +78,11 @@ console.log(ram.ID)//getter
 
 
 
+
+
+
+ 
+
+
+
+
