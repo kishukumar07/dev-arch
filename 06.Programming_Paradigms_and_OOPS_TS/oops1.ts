@@ -14,7 +14,7 @@ abstract class Vehicle_ {
     }
 
     startEngine() {
-        console.log(this.engine, "started"); 
+        console.log(this.engine, "started");
         //totally new complex code .... 
     }
 
@@ -39,9 +39,9 @@ class Truck extends Vehicle_ {
     }
 
 
-startEngine(): void {
-   console.log(this.engine + "Started343");   //totally new complex code .... 
-} 
+    startEngine(): void {
+        console.log(this.engine + "Started343");   //totally new complex code .... 
+    }
     //in both the parent and child class the method name are same ...but there implementations are not  same  ...there implementations are totally different .
 
 
@@ -52,9 +52,9 @@ startEngine(): void {
 //it is just a funcion  with the same name  but with diff implementation in parent vs child class THAT'S IT...
 
 
-let ashokaTruck  = new Truck("eng2",36,3,1400); 
-console.log(ashokaTruck) ; //this will have diff implementations of that fun  
-console.log(ashokaTruck.startEngine()) ; 
+let ashokaTruck = new Truck("eng2", 36, 3, 1400);
+console.log(ashokaTruck); //this will have diff implementations of that fun  
+console.log(ashokaTruck.startEngine());
 
 
 
@@ -65,27 +65,27 @@ console.log(ashokaTruck.startEngine()) ;
 
 //ENCAPSULATION  ....
 
-let id_counter=1; 
+let id_counter = 1;
 
 class Students {
-    name :string ;  
-    age :number ;
-  id :number ;   
-     constructor(name:string ,age:number,id:number){
-        this.name =name;  
-        this.age =age; 
-        this.id =id_counter ; 
+    name: string;
+    age: number;
+    id: number;
+    constructor(name: string, age: number, id: number) {
+        this.name = name;
+        this.age = age;
+        this.id = id_counter;
         id_counter++;   //auto increment 
-     }
+    }
 
 }
 
 
-const s= new Students("a",20,458232); 
+const s = new Students("a", 20, 458232);
 
 //can you do this ...?
-s.name ="abc" ;
-s.age =23; 
+s.name = "abc";
+s.age = 23;
 
 //but would you allow user to change there id ...
 // s.id=3434343;  //should it be allowed ... we make the this privet key 
@@ -144,10 +144,10 @@ console.log(ram.ID);  //geting the privet field of obj
 
 
 //there was one problem  of counter variable  ..lets get rid of that ... 
- //creating counter outside of the class and traking the user of class inside  ...dont you think is too odd ...  
- //so how to solve that 
+//creating counter outside of the class and traking the user of class inside  ...dont you think is too odd ...  
+//so how to solve that 
 
-
+/*
 let id_counter2=1; 
 
 class Instructor {
@@ -190,18 +190,46 @@ console.log(t.a);  //it will be 1  ::>> a's default value
 
 //we have to  make the same behaviour but witout using global variable  
 
+*/
+
+// and for that we have a new keyword  "static".. 
 
 
 
+class Instructor {
+    name: string;
+    age: number;
+    private id: number;
+    a: number;
+    static id_counter:number = 1;  //here static keyword  
+    constructor(name: string,
+        age: number) {
+
+        this.name = name;
+        this.age = age;
+        this.a = 1;
+        this.id = Instructor.id_counter;  //at default id is static id_counter .. you cannot write this.id_counter (err cause this represnts the instance of my class ) class.static wla variable 
+        Instructor.id_counter++;  
+    }
+
+    get ID() {
+        return this.id;
+    }
+
+    set setID(id: number) {
+        this.id = id;
+    }
+
+}
 
 
+const disha =new Instructor("disha",21); 
+const niket =new Instructor("niket",22); 
 
-
-
-
-
-
-
+//here both will have same id value =1  at first 
+console.log(disha.ID,niket.ID); 
+disha.setID=34; 
+console.log(disha.ID, niket.ID); 
 
 
 
