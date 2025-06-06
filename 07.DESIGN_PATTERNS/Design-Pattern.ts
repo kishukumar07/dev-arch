@@ -133,7 +133,7 @@ let skipCount = (page - 1) * number_of_documents_per_page;
 
     userModel.find().skip(x).limit(page);  //mongoose 
     or 
-    collectionname.find().skip.limit  //cli 
+    collectionname.find().skip().limit()  //cli 
 
 can we use limit() without skip()  => yes ofc ..
       
@@ -141,7 +141,85 @@ can we use limit() without skip()  => yes ofc ..
 
 
 
+
 */
+
+function skip() {
+    return {
+        limit() { },
+    };
+}
+
+//this is how it is used in top of that -> one function we call other  .... 
+skip().limit();   //Factory constructive design pattern ... 
+
+//what mongoose does is when we call one function it returns the same object  ...
+
+//lets clearify this more with classes ...
+
+
+
+class Person {
+    name: string;
+    age: number;
+    email: string;
+    phone: number;
+
+    constructor(name: string, age: number, email: string, phone: number) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.phone = phone;
+    }
+
+}
+
+//order of argument vs parameter matters 100%   => dont do anything with in constructor ... 
+
+class Female {
+    name?: string;
+    age?: number;
+    email?: string;
+    phone?: number;
+
+    constructor() {
+
+    }
+
+    setname(name: string) {
+        this.name = name;
+        return this;
+    }
+    setage(age: number) {
+        this.age = age;
+        return this;
+    }
+
+    //simlarly more implementations
+
+}
+
+//what we can do ...
+const f1 = new Female().setname("Disha").setage(22); //here we dont have to provide any thing as argument 
+
+
+console.log(f1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
