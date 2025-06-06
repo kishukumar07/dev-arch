@@ -135,6 +135,7 @@ console.log(t.a);  //it will be 1  ::>> a's default value
 
 */
 // and for that we have a new keyword  "static".. 
+//STATIC PROPERTY OF CLASS.... 
 class Instructor {
     constructor(name, age) {
         this.name = name;
