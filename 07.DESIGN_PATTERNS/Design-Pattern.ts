@@ -26,7 +26,7 @@ there are lot of design patterns...
                          \                       |                 |              |
                      singleton pattern            |                |               |
                         \                        |               Observer          | 
-                        \                        |                Pattern          |
+                        \                         |                Pattern          |
                         \                        |                                 |
                      Factory Pattern        FacadePattern                      MVC pattern
                         \
@@ -47,13 +47,14 @@ there are lot of design patterns...
 // 1.Creational design patterns are about how to create objects .
 
 /*
+
    
 i> singleton creational design pattern  -> One Instance OUT of A class. 
                         eg. express instance 
                             const app = express(); 
                         eg. const sequelize = new Sequelize();  
-                        eg. const db = Database.connenct(); 
-
+                        eg. const connection = mongoose.connect("urlhere"); 
+                             
 */
 
 
@@ -62,6 +63,7 @@ class Database {
     url: string;
     //we make the constructor itself private ...
     static Instance: Database | null = null;    //one is type and other is value . 
+
     private constructor(url: string) {
         this.url = url;
     }
@@ -91,7 +93,7 @@ class Database {
 
 // how can we connect the static property 
 
-const db = Database.connect("urlxdsfsadf/dbname"); //have you ever saw the same code somewhere... haaha ... 
+const db = Database.connect("urlxdsfsadf/dbname");  //have you ever saw the same code somewhere... haaha ... 
 //   Database.connect(" ")
 //again it will create another instance dont you think
 //so whats the solution => keep counter track ... 
@@ -99,7 +101,7 @@ const db = Database.connect("urlxdsfsadf/dbname"); //have you ever saw the same 
 //after some modification line 62/73/78 
 
 const db2 = Database.connect("dfsaf");
-console.log(db, db2)  //both will have same instance ...ie we got our goal ..
+console.log(db, db2); //both will have same instance ...ie we got our goal ..
 
 
 //SINGLE TON PATTERN IS VERY MUCH USED IN INDUSTRY STANDARD... 
@@ -114,18 +116,32 @@ console.log(db, db2)  //both will have same instance ...ie we got our goal ..
 
 
 
+/*
+
+
+II>. FACTORY CONSTRUCTIVE DESIGN PATTERN .... 
+                a way to create objects without knowing exactly which type of object will be created
 
 
 
+you remember pagination...
+
+let skipCount = (page * number_of_documents_per_page) - number_of_documents_per_page;
+// or simply
+let skipCount = (page - 1) * number_of_documents_per_page;
+
+
+    userModel.find().skip(x).limit(page);  //mongoose 
+    or 
+    collectionname.find().skip.limit  //cli 
+
+can we use limit() without skip()  => yes ofc ..
+      
+     userModel.find().limit(page);
 
 
 
-
-
-
-
-
-
+*/
 
 
 
