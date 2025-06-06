@@ -14,16 +14,78 @@
 
 
   
-/*   3.BEHAVIOURAL DESIGN PATTERN ...
-    
-I>. observer behavioural design pattern ...  
-     //someone is observing a particular person... 
-   
-    eg...  yt
-       upload  notifications (for subscribers).. 
-     if (not) - >   manually checking(anyone) ...
-codewith harry channel is observed by youtube... 
 
-this is observer behavioural design pattern ...
+/*  
+  3. BEHAVIORAL DESIGN PATTERN
 
-*/
+  I. Observer Behavioral Design Pattern
+
+  // It is used when one object (called **Subject**) maintains a list of dependents (called **Observers**) 
+  // and notifies them automatically of any state changes, usually by calling one of their methods.
+
+  // Real-life Example: YouTube Notifications
+
+  // - Subscribers (Observers) are watching the channel (Subject).
+  // - When the channel uploads a new video, all subscribers get notified.
+  // - If you're not subscribed, you have to manually check for new videos.
+
+
+  // In code terms, the **CodeWithHarry** channel is the Subject,
+  // and YouTube subscribers are the Observers.
+“CodeWithHarry channel is the Subject, and it maintains a list of dependents (Observers)”
+doesn't mean that CodeWithHarry himself is managing a list of subscribers directly.
+  CodeWithHarry (Subject) doesn’t maintain the list — YouTube does, as part of implementing the Observer pattern.
+  */
+ 
+ 
+ // a little bit implementations with classes....
+
+ //PUB-SUB-MODEL(feature built in redis for  notifications 2 the users  ...can explore)
+ class channel {
+   subscribers: Use_r[];
+   name: string;
+   videos: string[];
+ 
+   constructor(name: string) {
+     this.name = name;
+     this.subscribers = [];
+     this.videos = [];
+   }
+ 
+   subscribe(user: Use_r) {
+     this.subscribers.push(user);
+   }
+ 
+   upload(video: string) {
+     this.videos.push(video);
+     this.subscribers.forEach((user) => {
+       user.notifications.push(video);
+     });
+   }
+ }
+
+class Use_r {
+  name: string;
+  email: string;
+  notifications: string[];
+
+  constructor(name: string, email: string) {
+    this.email = email;
+    this.name = name;
+    this.notifications = [];
+  }
+}
+
+
+
+
+
+// 4.mvc you already learnt it ...
+
+
+
+
+
+
+
+
