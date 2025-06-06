@@ -75,7 +75,7 @@ class swordmen extends player {
 
 
 //3.L ->liscov Substitution Principle   
-         //if you can't replace the child class with the parent class you shouldnot make that inheritance  
+//if you can't replace the child class with the parent class you shouldnot make that inheritance  
 
 class Rectacngle {
     width: number;
@@ -130,12 +130,9 @@ console.log(sq.area()); //36 should be the ans
 
 
 
+//lets do the same thing with the rectangle...
 
-//I -> Interface Segrigation Principe  
-
-
-
-const rec =  new Rectacngle(5,5); //should line 126 and 136 are same things .....Y
+const rec = new Rectacngle(5, 5); //should line 126 and 136 are same things .....Y
 rec.setWidth(6);               //after this the rectangle !=squire  
 console.log(rec.area());  // 30  
 
@@ -149,6 +146,131 @@ console.log(rec.area());  // 30
 
 
 
+//I -> Interface Segrigation Principe   
+
+//a interface is a structur for class...
+//a class is structure for object ...
+//INTERFACE ->>CLASS => OBJECT ... 
+//the only benifit of a interface is that while creating an class we dont missout any properties that is defined inside interface ...  
+
+
+/*
+
+//this I keyword indicated interface 
+interface IEntity {
+    //all classes have these  fields 
+    level: number;
+    attack: number;
+    //only player has only this field
+    levelup?: Function;               //optional 
+    //only enemy can have followme field 
+    followPlayer?: Function;          //optional 
+
+
+}
+
+
+class Player implements IEntity {
+    level: number;
+    attack: number;
+
+
+    constructor(level: number, attack: number) {
+        this.level = 1;
+        this.attack = 10;
+    }
+
+    levelup() {
+
+    }
+
+}
+
+class Enemies implements IEntity {
+
+    level: number;
+    attack: number;
+
+
+    constructor(level: number, attack: number) {
+        this.level = 1;
+        this.attack = 10;
+    }
+
+    followPlayer() {
+
+    }
+}
+
+
+
+*/
+
+
+//ISSUE 1:  without making a field optional in interface if we want only  to implemented on some or specific class not all ...it will give err ..(interface wala problem) ...
+
+//ISSUE2: one more thing is there if there two common properties which is common for all class --> we will have to create a parent class for that dont you think ... like for level and attack wla properties.. but dont mind about that cause we are disscussing here about interface wla part ....  not super class 
+
+
+
+//this I keyword indicated interface 
+interface IEntity {
+    //all classes have these  fields 
+    level: number;
+    attack: number;
+    //removed optional types from here 
+
+}
+
+
+//built new interface for class player that used  inheritance 
+//we can also extends interfaces ... this is a very big advantage 
+interface Iplayer extends IEntity {
+    levelup(): void;
+}
+
+///simlarly 
+interface IEnemy extends IEntity {
+    followPlayer(): void;
+}
+
+
+
+
+class Player implements Iplayer {   //rather that implementing IEntity   implementing Iplayer
+    level: number;
+    attack: number;
+
+
+    constructor(level: number, attack: number) {
+        this.level = 1;
+        this.attack = 10;
+    }
+
+    levelup() {
+
+    }
+
+}
+
+class Enemies implements IEnemy {   //rather that implementing IEntity   implementing Iplayer
+
+    level: number;
+    attack: number;
+
+
+    constructor(level: number, attack: number) {
+        this.level = 1;
+        this.attack = 10;
+    }
+
+    followPlayer() {
+
+    }
+}
+
+
+// previously there was one single interface which were used for all the classes but due to it was nto dynamic ... we'll   used inheritance on interfaces and used diff  sub_interfaces accordingly    ...
 
 
 
