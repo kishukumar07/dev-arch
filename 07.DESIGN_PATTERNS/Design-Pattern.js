@@ -87,14 +87,9 @@ console.log(db, db2); //both will have same instance ...ie we got our goal ..
 /*
 
 
+
 II>. FACTORY CONSTRUCTIVE DESIGN PATTERN ....
                 a way to create objects without knowing exactly which type of object will be created
-
-
-
-
-
-
 
 
 
@@ -155,3 +150,11 @@ console.log(f1);
 
 //THIS IS WHAT WE CALLED BUILDER PATTERN ... WE ARE BUILDING A PARTICULAR  OBJECT ..
 //THIS PATTERN IS USED IN LOT OF PLACES ... ITS JUST A DEMO WE CREATED...
+
+
+
+
+
+
+
+
