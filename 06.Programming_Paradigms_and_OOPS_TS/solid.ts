@@ -276,6 +276,41 @@ class Enemies implements IEnemy {   //rather that implementing IEntity   impleme
 
 
 
+//D -> Dependenvy Inversion Principle .... 
+
+        //so we'all know about http module in node js =>createserver and we can fetch data get method    ...
+        //do we know about node-fetch (package) ... 
+   //so lets assume we dont know the syntex of get method for getting the data  ...  we want to fetch some data in my server not in client in my server ...
+
+    // ->first we download node fetch package ... 
+    //in every phase whenever we need some data  ..we'll use node fetch ... but you'know if nodefetch has some issues like it will hack your data or something like that so we'll think not to use it ... 
+ //so in such senerio we'll try to switch to http ... 
+//node fetch =>>> Http module of fetching the data 
+
+//Problem :  Every where we need to change the code wherever  i used the nodefetch . 
+
+// what is the simplest sollution of this ...
+    // inside the funcion we implement the node fetch 
+       //we'll import this particular fun everywhere i need to use . 
+          //NOW WE HAVE TO CHANGE IN ONLY ONE PLACE IN ORDER TO SWITCH ...
+          //THATS IS DEPENDENCY INVERSION PRINCIPLE ...
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
