@@ -419,6 +419,9 @@ class StripePay {
 //now the manager class plays role for independency acchivement and can be used ob baasis of dependency inversion Principle ...
 
 
+// we'll make 
+class payments { }  //and will link the paymentmanager and store together with this  this will be a abstraction layer .
+
 
 
 
