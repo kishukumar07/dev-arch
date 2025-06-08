@@ -42,7 +42,7 @@ CONFIDANCE COMES FROM -
                   
                      -THEY TELL YOU ABOUT A PARTICULAR FEATURE OF A APP LIKE ..
                          TELL ME HOW IS GOING TO BE THE FLOW /WHAT SHOULD BE TECH STACK ...
-                         YOU ARE GOING TO BE WITH FOR THE CART FEATURE OF A APP .
+                         YOU ARE GOING TO BE WITH FOR THE CART *FEATURE* OF A APP .
                   
                      - EVEN IF YOU NOT CODING YOU HAVE TO EXPLAIN THIS IN INTERVIEW ... 
                   
@@ -59,4 +59,4 @@ CONFIDANCE COMES FROM -
  
     :sprint5:   Project Presentation 
 
-    
+
