@@ -36,7 +36,7 @@ export abstract class Model implements IModel {
 
     constructor(model: DatabaseModel) {
         this.id = Math.random();
-        this.model = this.model;
+        this.model = model;
     }
 
 }
