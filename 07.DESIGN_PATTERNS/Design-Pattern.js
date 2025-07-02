@@ -87,13 +87,10 @@ console.log(db, db2); //both will have same instance ...ie we got our goal ..
 /*
 
 
-
 II>. FACTORY CONSTRUCTIVE DESIGN PATTERN ....
                 a way to create objects without knowing exactly which type of object will be created
 
 
-
-III>bUILDER CONSTRUCTIVE PATTERN ... 
 
 you remember pagination...
 
@@ -109,6 +106,8 @@ let skipCount = (page - 1) * number_of_documents_per_page;
 can we use limit() without skip()  => yes ofc ..
       
      userModel.find().limit(page);
+
+
 
 
 */
@@ -144,17 +143,4 @@ class Female {
 }
 //what we can do ...
 const f1 = new Female().setname("Disha").setage(22); //here we dont have to provide any thing as argument 
-//EVEN IF YOU GOING TO CHANGE THE ORDERING IT'S DOESNT MATTER ... 
 console.log(f1);
-
-
-//THIS IS WHAT WE CALLED BUILDER PATTERN ... WE ARE BUILDING A PARTICULAR  OBJECT ..
-//THIS PATTERN IS USED IN LOT OF PLACES ... ITS JUST A DEMO WE CREATED...
-
-
-
-
-
-
-
-

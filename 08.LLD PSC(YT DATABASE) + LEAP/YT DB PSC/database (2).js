@@ -51,7 +51,7 @@ class CreatorModel extends UserModel {
     }
 }
 exports.CreatorModel = CreatorModel;
-class VideoModel extends Model {
+class VideoModel extends Model {k
     constructor(link, title, categories, userID) {
         var _a;
         super(DatabaseModel.videos);
