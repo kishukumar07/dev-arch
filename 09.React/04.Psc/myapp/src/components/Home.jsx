@@ -12,7 +12,7 @@ function Home() {
   const fetchdata = async () => {
     try {
       let responsedata = await fetch(
-        `https://jsonplaceholder.typicode.com/todos?_page=${page}`
+        `https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=5`
       );
       responsedata = await responsedata.json();
       settodos(responsedata);
