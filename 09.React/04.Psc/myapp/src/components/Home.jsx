@@ -16,7 +16,7 @@ function Home() {
       );
       responsedata = await responsedata.json();
       settodos(responsedata);
-      console.log(responsedata);
+      // console.log(responsedata);
     } catch (err) {
       throw new Error(err);
     }
