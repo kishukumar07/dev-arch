@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { CounterContext } from "./A";
+import { CounterContext } from "./CounterContextComponent";
 
 function D() {
   const context = useContext(CounterContext); //hook

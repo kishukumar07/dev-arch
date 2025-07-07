@@ -1,22 +1,19 @@
-import React, { useState, createContext } from "react";
+import React, { createContext } from "react";
 
 import B from "./B";
 import C from "./C";
-
-export const CounterContext = createContext(); //not a hook
+import CounterContextComponent from "./CounterContextComponent";
 
 function A() {
   //Declaring the State for counter here in order to pass form G to D
 
-  const [counter, setcounter] = useState(0);
-
   return (
     <div>
       A
-      <CounterContext.Provider value={{counter,setcounter}}  >
+      <CounterContextComponent>
         <B />
         <C />
-      </CounterContext.Provider>
+      </CounterContextComponent>
     </div>
   );
 }
