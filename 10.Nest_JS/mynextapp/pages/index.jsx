@@ -30,3 +30,6 @@ export const getStaticProps = async () => {
     },
   };
 }; //we can acess the database here ...
+
+
+//similarly we have getServerSideProps= >  it will do a server side rendering ...

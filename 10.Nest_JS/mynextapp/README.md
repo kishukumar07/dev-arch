@@ -46,10 +46,9 @@ Diff types of rendering in Next
 - SSR – Server-Side Rendering
 - ISG – Incremental Static Generation
 
-
-
-
-
-
--npm run build 
+-npm run build
 npx json-server --watch db.json --port 8080
+
+we saw nest js supports two types of rendering ...
+get static props [SSG]    ---> 
+get server side props [SSE] ---> 
